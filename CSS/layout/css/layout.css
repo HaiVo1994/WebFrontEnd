@@ -1,0 +1,54 @@
+#main, #head, #head-link,#footer{
+    width: auto;
+    display: block;
+}
+#main{
+    position: relative;
+    margin: 0 auto;
+    height: 900px;
+}
+#head, #head-link{
+    height: 80px;
+}
+#head{
+    background-color: aquamarine;
+}
+#head-link{
+    background-color: bisque;
+}
+#left, #right, #content{
+    display: inline-block;
+}
+#left, #right{
+    position: fixed;
+    top: 200px;
+    width: 10%;
+    height: 720px;
+}
+
+#left{
+    background-color: blue;
+    left: 0;
+}
+
+#right{
+    background-color: coral;
+    right: 0;
+}
+
+#content{
+    position: relative;
+    background-color: deepskyblue;
+    width: 72%;
+    height: 1000px;
+    margin-left: 15%;
+    margin-right: 15%;
+}
+
+#footer{
+    height: 10%;
+    background-color: gold;
+    position: relative;
+    top: auto;
+    bottom: 0;
+}
