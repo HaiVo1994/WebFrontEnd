@@ -14,7 +14,7 @@
         <h3>Dùng để tìm thành phần con trong thành phần cha</h3>
         <h3>Cấu trúc: $( "#demo-find" ).find("p").find( "span" )</h3>
         <h4>Trong đó $( "#demo-find" ) là selector, "span" là thành phần cần tìm được chứa trong selector </h4>
-        <h3>Demo hàm find</h4>
+        <h3>Demo hàm find</h3>
         <div id="demo-find">
             <p><span>Hello</span>, how are you?</p>
             <p>Me? I'm <span>good</span>.</p>
@@ -26,20 +26,74 @@
     </div>
 
     <div>
-            <h2>Hàm hide():</p>
-            <h3>Dùng để ẩn thành phần giống như sử dụng style="display: none;"</h3>
-            <h3>Cấu trúc: $( "#demo-find" ).find("p").find( "span" )</h3>
-            <h4>Trong đó $( "#demo-find" ) là selector, "span" là thành phần cần tìm được chứa trong selector </h4>
-            <h3>Demo hàm find</h4>
-            <div id="demo-find">
-                <p><span>Hello</span>, how are you?</p>
-                <p>Me? I'm <span>good</span>.</p>
-            </div>
-            
+        <h2>Hàm hide():</p>
+        <h3>Dùng để ẩn thành phần giống như sử dụng style="display: none;"</h3>
+        <h3>Cấu trúc: $("#test-hide").hide();</h3>
+        <h4>Trong đó $("#test-hide") là selector</h4>
+        <h2>Hàm show()</h2>
+        <h2>Dùng để hiển thị lại những thành phần bị ẩn</h2>
+        <h3>Cấu trúc: $("#test-hide").show();</h3>
+        <h4>Trong đó $("#test-hide") là selector</h4>
+        <h3>Demo hàm hide() và show()</h3>
+        <div id="demo-hide">
+            <p>If you click on the "Hide" button, <span id="test-hide">I will disappear</span> </p>
+            <input type="button" value="Hide" id="hide"><input type="button" value="Show" id ="show">
             <script>
-                $( "#demo-find" ).find("p").find( "span" ).css( "color", "red" );
+                $("#hide").click(
+                    function(){
+                        $("#test-hide").hide();
+                    }
+                );
+                $("#show").click(
+                    function(){
+                        $("#test-hide").show();
+                    }
+                );
             </script>
         </div>
-    
+    </div>
+
+
+    <div>
+        <h2>Hàm toggle():</p>
+        <h3>Dùng hiển thị và ẩn các thành phần phù hợp. Việc hiển thị và ẩn được luân phiên nhau giữa các lần action (VD action Click).</h3>
+        <h3>Cấu trúc: $( "#test-toggle" ).toggle()</h3>
+        <h4>Trong đó $( "#test-toggle" ) là selector, "span" là thành phần cần tìm được chứa trong selector </h4>
+        <h3>Demo hàm find</h3>
+        <div id="demo-toggle">
+            <p>If you click on the "Toggle" button, <span id="test-toggle">I will disappear</span> </p>
+            <input type="button" value="Toggle" id="toggle">
+            <script>
+                $("#toggle").click(
+                    function(){
+                        $("#test-toggle").toggle();
+                    }
+                );
+            </script>
+        </div>
+    </div>
+
+    <div>
+        <h2>Hàm animate():</p>
+        <h3>Dùng để thực hiện một hình ảnh động (animate) tùy chỉnh của một tập hợp các thuộc tính css</h3>
+        <h3>Cấu trúc: $("#test-animate").animate({left: '100px'}, "slow");</h3>
+        <h4>Trong đó $("#test-animate") là selector, {left: '100px'} là tập hợp các thuộc tính css, "slow" là tốc độ của animate </h4>
+        <h3>Demo hàm find</h3>
+        <div id="demo-animate">
+            <script>
+                $(document).ready(function(){
+                    $("#button-animate").click(function(){
+                        var div = $("#test-animate"); 
+                        div.animate({left: '100px'}, "slow");
+                        div.animate({fontSize: '100px'}, "slow");
+                    });
+                });
+            </script>
+            <button id="button-animate">Start Animation</button>
+            <div id="test-animate" style="background:#98bf21;height:100px;width:200px;position:absolute;">HELLO</div>
+        </div>
+    </div>
+
+
 </body>
 </html>

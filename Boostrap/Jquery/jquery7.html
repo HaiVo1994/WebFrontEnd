@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+</head>
+<body>
+    <div>
+        <h2>
+            <pre>            
+                text(): lấy hoặc thay đổi hoặc gán nội dung text cho thành phần.
+            </pre>
+        </h2>
+        <div>
+            <pre>
+                    Cấu trúc
+                    Đã được thêm vào từ phiên bản 1.0
+                    .text()
+                    
+                    Lấy nội dung HTML của thành phần
+                    
+                    $('div').text();
+                    .text('Nội dung')
+                    
+                    Gán nội dung HTML cho thành phần
+                    
+                    $('div').text('Nội dung được thêm vào');
+                    Đã được thêm vào từ phiên bản 1.4
+                    .text(function(){...})
+                    
+                    $('div').text(function(index){
+                        return 'item thứ ' + (index + 1);
+                    });
+            </pre>
+        </div>
+        <div>
+            <script>
+                $(function(){
+                    var txt = $('p').text();
+                    $('button').click(function(){
+                    alert(txt); 
+                    });
+                });
+            </script>
+            <p>Thành phần <span>span</span> bên trong thành phần cha</p>
+            <button>Click</button>
+        </div>
+    </div>
+</body>
+</html>

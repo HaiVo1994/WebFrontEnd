@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+</head>
+<body>
+    <div>
+        <h2>Hàm html():</p>
+        <h3>Dùng lấy nội dung HTML của thành phần, hoặc gán giá trị HTML cho thành phần</h3>
+        <h3>Cấu trúc: $('#test-html').html()</h3>
+        <h4>Trong đó $('#test-html') là selector</h4>
+        <h3>Demo hàm html</h3>
+        <div id="demo-html">
+            <div id="test-html">
+                <p>Thành phần <span>span</span> bên trong thành phần cha</p>
+            </div>
+            <button id="html">Click</button>
+            <script>
+                $(function(){
+                    var divHtml = $('#test-html').html();
+                    $('#html').click(function(){
+                        alert(divHtml); 
+                    });
+                });
+            </script>
+        </div>
+    </div>
+
+    <div>
+        <h2>Hàm on():</p>
+        <h3>Dùng để đính kèm một hàm xử lý sự kiện cho một hoặc nhiều sự kiện tới một thành phần được chọn</h3>
+        <h3>Cấu trúc: $('#test-on').on('Sự kiện', function(){...})</h3>
+        
+        <h2>Hàm off():</p>
+        <h3>Dùng để để loại bỏ việc xử lý một sự kiện của thành phần khi sử dụng phướng thức .on()</h3>
+        <h3>Cấu trúc: $('#test-on').off()</h3>
+
+        <h3>Demo hàm on off</h3>
+        <div id="demo-append">
+            <span id="on">Nội dung td</span>
+            <button id="off">off</button>
+            <table border="1">
+                <tr>
+                    <td>TD 01</td>
+                    <td>TD 02</td>
+                    <td>TD 03</td>
+                </tr>
+                
+                <tr>
+                    <td>TD 11</td>
+                    <td>TD 12</td>
+                    <td>TD 13</td>
+                </tr>
+                
+                <tr>
+                    <td>TD 21</td>
+                    <td>TD 22</td>
+                    <td>TD 23</td>
+                </tr>
+            </table>
+            <script>
+                $(function(){
+                    $('td').on('click',function(){
+                        var txt = $(this).text();
+                        $('#on').text(txt);
+                    });
+                    $("#off").click(function(){
+                        $("td").off();
+                    });
+                });
+            </script>
+        </div>
+    </div>
+</body>
+</html>

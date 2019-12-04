@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <style>
+        div .test {
+            background-color: blue;
+            display: none;
+            float: left;
+            margin-right: 20px;
+            height: 100px;
+            width: 100px;
+        }
+        p {
+            clear: both;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <h2>Hàm fadeIn():</p>
+        <h3>Dùng hiển thị các thành phần phù hợp với hiệu ứng rõ dần (fade in)</h3>
+        <h3>Cấu trúc: $("#test-fade-01").fadeIn()</h3>
+        <h4>Trong đó $( "#test-fade-01") là selector</h4>
+        <h2>Hàm fadeOut():</p>
+        <h3>Dùng ẩn các thành phần phù hợp với hiệu ứng mờ dần (fade)</h3>
+        <h3>Cấu trúc: $("#test-fade-01").fadeOut()</h3>
+        <h4>Trong đó $( "#test-fade-01") là selector</h4>
+        <h3>Demo hàm fadeIn và fadeOut</h3>
+        <div id="demo-fade">
+            <p><button id="test-fadeIn">fadeIn</button></p>
+            <p><button id="test-fadeOut">fadeOut</button></p>
+            <div  class="test" id="test-fade-03">fadeIn(2000)</div>
+            <div  class="test" id="test-fade-02">fadeIn('slow')</div>
+            <div  class="test" id="test-fade-01">fadeIn()</div>
+            
+            <script>
+                $(function(){
+                    $('#test-fadeIn').click(function(){
+                        $('#test-fade-03').fadeIn(2000);
+                        $('#test-fade-02').fadeIn('slow');
+                        $('#test-fade-01').fadeIn();
+                    });
+                    $('#test-fadeOut').click(function(){
+                        $('#test-fade-03').fadeOut(2000);
+                        $('#test-fade-02').fadeOut('slow');
+                        $('#test-fade-01').fadeOut();
+                    });
+                });
+            </script>
+        </div>
+    </div>
+
+    <div>
+        <h2>Hàm slideDown():</p>
+        <h3>Dùng hiển thị các thành phần phù hợp với hiệu ứng chuyển động trượt (slide)</h3>
+        <h3>Cấu trúc: $("#test01").slideDown()</h3>
+        <h4>Trong đó $( "#test01" ) là selector</h4>
+        <h2>Hàm slideUp():</p>
+            <h3>Dùng ẩn các thành phần phù hợp với hiệu ứng chuyển động trượt (slide)</h3>
+            <h3>Cấu trúc: $("#test-slide-01").slideUp()</h3>
+            <h4>Trong đó $( "#test-slide-01" ) là selector</h4>
+        <h3>Demo hàm fadeIn và fadeOut</h3>
+        <div id="demo-slide">
+            <p><button id="test-slideDown">slideDown</button></p>
+            <p><button id="test-slideUp">slideUp</button></p>
+            <div class="test" id="test-slide-01">slideDown(2000)</div>
+            <div class="test" id="test-slide-02">slideDown(slow)</div>
+            
+            <script>
+                $(function(){
+                    $('#test-slideDown').click(function(){
+                        $('#test-slide-01').slideDown(2000);
+                        $('#test-slide-02').slideDown('slow');
+                    });
+                    $('#test-slideUp').click(function(){
+                        $('#test-slide-01').slideUp(2000);
+                        $('#test-slide-02').slideUp('slow');
+                    });
+                });
+            </script>
+        </div>
+    </div>
+</body>
+</html>

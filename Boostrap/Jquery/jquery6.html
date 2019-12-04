@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+</head>
+<body>
+    <div>
+        <h2>
+            <pre>
+                val() lấy giá trị hiện tại của thành phần, hoặc thay đổi giá trị cho thành phần.
+                val() sẽ lấy giá trị đầu tiên nếu thành phần chọn là một danh sách.
+                Thông thường giá trị là các thành phần của form.
+            </pre>
+        </h2>
+        <div>
+            <pre>
+                Cấu trúc
+                    Đã được thêm vào từ phiên bản 1.0
+                    .val()
+
+                    Lấy giá trị của thành phần
+
+                    $('input').val();
+                    .val('giá trị')
+
+                Gán giá trị cho thành phần
+
+                    $('select').val('giá trị của thành phần');
+                    $('input').val(100);
+                    Đã được thêm vào từ phiên bản 1.4
+                    .val(function(index,value){...})
+
+                    $('input').val(function(index,value){
+                        return value + ' ' + this.className;
+                    });
+            </pre>
+        </div>
+        <div>
+            <script>
+                $(function(){
+                    var inputVal = $('input').val();
+                    $('button').click(function(){
+                        alert(inputVal); 
+                    });
+                });
+            </script>
+            <input type="text" value="12">
+            <button>Click</button>
+        </div>
+    </div>
+</body>
+</html>

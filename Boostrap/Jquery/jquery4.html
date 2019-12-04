@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <style>
+        p { 
+            background: yellow;
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div>
+            <h2>
+                Hàm css(): Được dùng để thêm một hoặc nhiều style cho thành phần.
+                Ngoài ra còn có thể sử dụng .css() để lấy giá trị style của thành phần
+            </h2>
+            <div>
+                <pre>
+                    Cấu trúc
+                    Thêm style cho thành phần:
+                    Đã được thêm vào từ phiên bản 1.0
+                    Thêm một style cho thành phần
+                    
+                    .css('thuộc tính','giá trị')
+                    
+                    $('p').css('color','red');
+                    Thêm nhiều style cho thành phần
+                    
+                    .css({'thuộc tính 01':'giá trị 01','thuộc tính 02':'giá trị 02',...})
+                    
+                    $('p').css({'color':'yellow','background':'blue'});
+                    Đã được thêm vào từ phiên bản 1.4
+                    .css('thuộc tính',function(index,giá trị){})
+                    
+                    $('p').css(width,function(index,value){
+                        return parseFloat( value ) * 1.2;
+                    });
+                    Lấy giá trị style của thành phần:
+                    Đã được thêm vào từ phiên bản 1.0
+                    Lấy một giá trị style của thành phần
+                    
+                    .css('thuộc tính'
+                    
+                    $('p').css('color');
+                    Lấy nhiều giá trị style của thành phần
+                    
+                    .css({'thuộc tính 01','thuộc tính 02',...})
+                    
+                    $('p').css({'color','background'});
+                </pre>
+            </div>
+            <div>
+                    <script>
+                        $(function(){
+                            $('p.test').css('width', function(index,value){
+                                return parseFloat( value ) * 2;
+                            });
+                        });
+                    </script>
+                    <p class="test">Thành phần p có class</p>
+                    <p>Thành phần p</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

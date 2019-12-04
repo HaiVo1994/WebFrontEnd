@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <style>
+        .list0 { color: red; }
+        .list1 { color: blue; }
+        .list2 { color: yellow; }
+        .list3 { color: green; }
+        .list4 { color: gray; }
+        .list5 { color: pink; }
+    </style>
+</head>
+<body>
+    <div>
+        <h2>
+            <pre>            
+                each(): Thực hiện một hành động cho mỗi phần tử, để làm được điều này ta cần sử dụng phương thức $(this)
+            </pre>
+        </h2>
+        <div>
+            <pre>
+                Cấu trúc
+                Đã được thêm vào từ phiên bản 1.0
+                .each(function(){}
+
+                $('li').each(function(index){
+                    $(this).click(function(){
+                        $(this).addClass("test"+index);
+                    });
+                });
+            </pre>
+        </div>
+        <div>
+            <script>
+                $(function(){
+                    $('li').each(function(index){
+                        $(this).click(function(){
+                            $(this).addClass("list"+index);
+                        });
+                    });
+                });
+            </script>
+            <ul>
+                <li>list 01</li>
+                <li>list 02</li>
+                <li>list 03</li>
+                <li>list 04</li>
+                <li>list 05</li>
+                <li>list 06</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
