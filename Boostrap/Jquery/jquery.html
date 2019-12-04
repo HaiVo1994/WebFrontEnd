@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Page Title</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+</head>
+<body>
+    <div>
+        <h2>Hàm find():</p>
+        <h3>Dùng để tìm thành phần con trong thành phần cha</h3>
+        <h3>Cấu trúc: $( "#demo-find" ).find("p").find( "span" )</h3>
+        <h4>Trong đó $( "#demo-find" ) là selector, "span" là thành phần cần tìm được chứa trong selector </h4>
+        <h3>Demo hàm find</h4>
+        <div id="demo-find">
+            <p><span>Hello</span>, how are you?</p>
+            <p>Me? I'm <span>good</span>.</p>
+        </div>
+        
+        <script>
+            $( "#demo-find" ).find("p").find( "span" ).css( "color", "red" );
+        </script>
+    </div>
+
+    <div>
+            <h2>Hàm hide():</p>
+            <h3>Dùng để ẩn thành phần giống như sử dụng style="display: none;"</h3>
+            <h3>Cấu trúc: $( "#demo-find" ).find("p").find( "span" )</h3>
+            <h4>Trong đó $( "#demo-find" ) là selector, "span" là thành phần cần tìm được chứa trong selector </h4>
+            <h3>Demo hàm find</h4>
+            <div id="demo-find">
+                <p><span>Hello</span>, how are you?</p>
+                <p>Me? I'm <span>good</span>.</p>
+            </div>
+            
+            <script>
+                $( "#demo-find" ).find("p").find( "span" ).css( "color", "red" );
+            </script>
+        </div>
+    
+</body>
+</html>
